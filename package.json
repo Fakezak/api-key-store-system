@@ -1,48 +1,26 @@
 {
-  "name": "api-key-store-system",
+  "name": "api-key-generator-vercel",
   "version": "1.0.0",
-  "description": "Production-ready API key generator and management system for stores",
-  "main": "index.js",
+  "description": "Serverless API key generator for Vercel",
+  "main": "api/generate.js",
   "scripts": {
-    "start": "node index.js",
-    "dev": "nodemon index.js",
-    "test": "jest",
-    "lint": "eslint .",
-    "format": "prettier --write .",
-    "db:seed": "node scripts/seed.js",
-    "db:cleanup": "node scripts/cleanupExpiredKeys.js"
+    "start": "vercel dev",
+    "deploy": "vercel deploy --prod"
   },
   "dependencies": {
-    "express": "^4.18.2",
-    "mongoose": "^7.0.0",
-    "cors": "^2.8.5",
-    "helmet": "^7.0.0",
-    "express-rate-limit": "^6.7.0",
-    "dotenv": "^16.0.3",
-    "jsonwebtoken": "^9.0.0",
-    "bcryptjs": "^2.4.3",
-    "uuid": "^9.0.0",
-    "express-validator": "^6.15.0",
-    "winston": "^3.9.0"
+    "uuid": "^9.0.0"
   },
   "devDependencies": {
-    "nodemon": "^2.0.22",
-    "jest": "^29.5.0",
-    "supertest": "^6.3.3",
-    "eslint": "^8.38.0",
-    "prettier": "^2.8.7"
+    "vercel": "^32.0.0"
   },
   "engines": {
-    "node": ">=14.0.0"
+    "node": ">=18.0.0"
   },
   "keywords": [
     "api-key",
-    "key-generator",
-    "store",
-    "ecommerce",
-    "authentication",
-    "authorization"
+    "generator",
+    "vercel",
+    "serverless"
   ],
-  "author": "Your Name",
   "license": "MIT"
 }
